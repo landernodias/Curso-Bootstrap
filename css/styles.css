@@ -72,6 +72,7 @@ header .navbar {
 #mainSlider .carousel-caption p {
     font-size: 22px;
     font-weight: 300;
+    margin-bottom: 100px;
     color: #FFF;
 }
 
@@ -96,4 +97,78 @@ header .navbar {
 
 .carousel-indicators .active {
     background-color: #65DAF9;
+}
+
+/*Sobre a empresa */
+#about-area {
+    background-color: #f9f9f9;
+
+}
+
+.main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.main-title::after {/*pseudo elemento after*/
+    content:  "";
+    border-top: 2px solid #333; /*mesmo sendo top fica em baixo*/
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title{
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;/*maiusculo*/
+    font-weight: bold;/*negrito*/
+}
+
+#about-list{
+    list-style: none;/*retira o butlers*/
+    padding-left: 0;/*retira o padding nativo*/
+}
+
+#about-list li {
+    line-height: 30px;/*espaçamento das li*/
+}
+
+#about-list i {
+    color: #65DAF9;
+    margin-right: 15px;
+}
+
+/*Serviços*/
+
+.service-box{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.service-box i, .service-box h4 {
+    transition: .5s;
+}
+
+.service-box i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.service-box h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* > : verifica diretamente o elemento que esta dentro
+
+Sempre que alguem passar o mause vou estilizar o pararagrafo que esta dentro*/
+.service-box:hover > i, .service-box:hover > h4 {
+    color: #65DAF9;
+
 }
