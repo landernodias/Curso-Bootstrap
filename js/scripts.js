@@ -161,4 +161,42 @@ $(document).ready(function(){
         }
     }
 
+    // scroll para seções
+    let navBtn = $('.nav-item');//seleciona barra de navegação 
+
+    let bannerSetion = $('#mainSlider'); //variaveis das sections
+    let aboutSection = $('#about-area');
+    let servicesSection = $('#services-area');
+    let teamSection = $('#team-area');
+    let portifolioSection = $('#portfolio-area');
+    let contactSection = $('#contact-area');
+
+    let scrollTo = '';
+
+    $(navBtn).click(function() {
+        /* botão clicado */
+        let btnId = $(this).attr('id'); //pega id do botão clicado
+        console.log(btnId);
+
+        if(btnId == 'about-menu') {
+            scrollTo = aboutSection;
+        } else if(btnId == 'services-menu') {
+            scrollTo = servicesSection;
+        } else if (btnId == 'team-menu') {
+            scrollTo = teamSection;
+        } else if (btnId == 'portfolio-menu'){
+            scrollTo = portifolioSection;
+        } else if (btnId == 'contact-menu') {
+            scrollTo = contactSection;
+        } else {
+            scrollTo = bannerSetion;
+        }
+
+        //animação do scroll para a região escolhida
+        // document.documentElement, document.body garante o sroll
+        // scrollTop: $(scrollTo).offset().top: sai do topo e vai até onde foi escolhido
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(scrollTo).offset().top - 70
+        }, 1500);
+    });
 });
